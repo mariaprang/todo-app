@@ -14,10 +14,23 @@
     <title>Frontend Mentor | Todo app</title>
   </head>
   <body>
-    <header></header>
+    <header id="header"></header>
     <main>
-      <div class="app"></div>
+      <div class="app">
+        <div class="row first">
+          <div class="title">TODO</div>
+          <img width="35" src="images/icon-moon.svg" id="theme-button" onclick="changeTheme();"/>
+        </div>
+
+        <div class="row">
+          <input class="custom-input" type="text" placeholder="Create new todo..">
+          <div class="current-tasks" id="tasks">
+            
+          </div>
+        </div>
+      </div>
     </main>
-    <section></section>
+    <section id="section"></section>
+    <script src="app.js"></script>
   </body>
 </html>
