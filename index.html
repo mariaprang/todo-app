@@ -1,36 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <link rel="stylesheet" href="style.css" type="text/css" />
-    <title>Frontend Mentor | Todo app</title>
-  </head>
-  <body>
-    <header id="header"></header>
-    <main>
-      <div class="app">
-        <div class="row first">
-          <div class="title">TODO</div>
-          <img width="35" src="images/icon-moon.svg" id="theme-button" onclick="changeTheme();"/>
-        </div>
 
-        <div class="row">
-          <input class="custom-input" type="text" placeholder="Create new todo..">
-          <div class="current-tasks" id="tasks">
-            
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <title>Frontend Mentor | Todo app</title>
+</head>
+
+<body>
+  <header id="header"></header>
+  <main>
+    <div class="app">
+      <div class="row first">
+        <div class="title">TODO</div>
+        <img width="35" src="images/icon-moon.svg" id="theme-button" onclick="changeTheme();" />
+      </div>
+
+      <div class="column">
+        <input class="custom-input" type="text" placeholder="Create new todo.." />
+        <div class="current-tasks" id="tasks">
+          <div class="task row-plain">
+            <input type="radio" checked />
+            <div class="task-title">Complete online JS course</div>
+          </div>
+          <hr />
+
+          <div class="task row-plain">
+            <input type="radio" />
+            <div class="task-title">Complete online JS course</div>
+          </div>
+          <hr />
+          <div class="task row-plain">
+            <input type="radio" />
+            <div class="task-title">Complete online JS course</div>
           </div>
         </div>
       </div>
-    </main>
-    <section id="section"></section>
-    <script src="app.js"></script>
-  </body>
+    </div>
+  </main>
+  <section id="section"></section>
+  <script src="app.js"></script>
+</body>
+
 </html>

@@ -18,7 +18,7 @@ header {
 section {
   width: 100%;
   height: 100vh;
-  background-color: white;
+  background-color: hsl(0, 0%, 95%);
   transition: all 0.7s;
 }
 
@@ -36,6 +36,11 @@ section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.row-plain {
+  display: flex;
+  flex-direction: row;
 }
 
 .title {
@@ -61,9 +66,9 @@ section {
   transition: all 0.7s;
 }
 
-.custom-input {
+.custom-input,
+.task {
   border: none;
-  padding: 20px 10px;
   width: 100%;
   margin: 20px auto;
   border-radius: 5px;
@@ -73,6 +78,58 @@ section {
   font-family: "Josefin Sans", sans-serif;
 }
 
-.first{
-    margin-bottom: 20px;
+.first {
+  margin-bottom: 20px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-title {
+  width: fit-content;
+  margin: auto 30px;
+}
+
+.current-tasks{
+  width: 100%;
+  /* border: 1px solid black; */
+  background-color: white;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.task {
+  width: 100%;
+  background-color: white;
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+
+.task input[type="radio"] {
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+input[type="radio"]:checked + label > img {
+}
+input[type="radio"]:checked:after {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  top: -2px;
+  left: -1px;
+  position: absolute;
+  background: linear-gradient(90deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  content: url("images/icon-check.svg");
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+  text-align: center;
+}
+
+hr{
+  padding: 0;
+  margin: 0;
 }
